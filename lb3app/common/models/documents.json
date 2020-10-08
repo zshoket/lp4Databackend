@@ -1,0 +1,95 @@
+{
+  "name": "documents",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "unternehmen_id": {
+      "type": "string",
+      "required": true
+    },
+    "dimension": {
+      "type": "string",
+      "required": true
+    },
+    "einordnungKette": {
+      "type": "string"
+    },
+    "kurzbeschreibung": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "reifegrad": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "nutzenversprechen": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "herausforderungen": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "veraenderungenMensch": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "veraenderungenOrganisation": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "veraenderungenTechnologie": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "risikoursachens": {
+      "type": "hasMany",
+      "model": "Risikoursachen",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "risikoauswirkungs": {
+      "type": "hasMany",
+      "model": "Risikoauswirkung",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "risikos": {
+      "type": "hasMany",
+      "model": "risiko",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

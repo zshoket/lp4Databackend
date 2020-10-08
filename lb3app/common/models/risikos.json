@@ -1,0 +1,60 @@
+{
+  "name": "risiko",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dimension": {
+      "type": "string",
+      "required": true
+    },
+    "eintritWahr": {
+      "type": "string",
+      "required": true
+    },
+    "schadenshohe": {
+      "type": "string",
+      "required": true
+    },
+    "risikoursachenId": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "risikoauswirkungs": {
+      "type": "hasMany",
+      "model": "Risikoauswirkung",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "risikoursachens": {
+      "type": "hasMany",
+      "model": "Risikoursachen",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "documents": {
+      "type": "hasMany",
+      "model": "documents",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

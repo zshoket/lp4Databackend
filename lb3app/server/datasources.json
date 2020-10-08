@@ -1,0 +1,13 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb+srv://testboy:qwertz110@cluster0-ddf0e.mongodb.net/test?retryWrites=true&w=majority",
+    "database": "posts",
+    "password": "qwertz110",
+    "name": "db",
+    "user": "testboy",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
